@@ -12,7 +12,7 @@ Tarik Gulbas
 Overiview
 --------
 
-    I've decided to create a sample TestNG Framework and share my approach to creation from scratch. In this project I have worked on http://secure.smartbearsoftware.com/samples/testcomplete12/WebOrders/login.aspx website. The tools, the design and the benefits are written below.
+ I've decided to create a sample TestNG Framework and share my approach to creation from scratch. In this project I have worked on http://secure.smartbearsoftware.com/samples/testcomplete12/WebOrders/login.aspx website. The tools, the design and the benefits are written below.
 
  This project should be treated as a continual work in progress. I hope this will help you to better understand Java and Selenium concepts, regardless of your current knowledge or interest level. Programming is one of my greatest joys and, if it isn't already one of yours, perhaps this will bring you one step closer.
 
