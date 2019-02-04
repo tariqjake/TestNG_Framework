@@ -7,9 +7,9 @@ Project source can be downloaded from : https://github.com/tariqjake/TestNG_Fram
 ----
 Author
 --------
-Tarik Gulbas
+TariqJake
 
-Overiview
+Overview
 --------
 
  I've decided to create a sample TestNG Framework and share my approach to creation from scratch. In this project I have worked on http://secure.smartbearsoftware.com/samples/testcomplete12/WebOrders/login.aspx website. The tools, the design and the benefits are written below.
