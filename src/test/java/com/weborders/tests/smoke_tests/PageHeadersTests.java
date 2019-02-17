@@ -2,6 +2,7 @@ package com.weborders.tests.smoke_tests;
 
 import com.weborders.utilities.ApplicationConstants;
 import com.weborders.utilities.ConfigurationReader;
+import com.weborders.utilities.Driver;
 import com.weborders.utilities.TestBase;
 import org.testng.annotations.Test;
 
@@ -10,9 +11,8 @@ import static org.testng.Assert.fail;
 
 public class PageHeadersTests extends TestBase {
     //This test will fail on purpose, remove line
-    @Test
+    @Test(groups = "regression")
     public void pageHeadersTest(){
-        // create a new test / test case in the report and give name : Page headers test
         extentLogger = report.createTest("Page headers test");
 
         // use logger to log the steps
@@ -35,11 +35,10 @@ public class PageHeadersTests extends TestBase {
         extentLogger.info("Verifying header for order page");
         assertEquals(pages.order().header.getText(), ApplicationConstants.ORDER);
 
-        //This test will fail on purpose
-        fail();
 
         // log the pass
         extentLogger.pass("Page headers test");
+        Driver.getDriver().getPageSource();
 
     }
 

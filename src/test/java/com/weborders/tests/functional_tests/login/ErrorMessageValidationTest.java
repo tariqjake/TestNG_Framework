@@ -23,7 +23,7 @@ public class ErrorMessageValidationTest extends TestBase {
 
     }
 
-    @Test (groups = "regression")
+    @Test
     public void wrongPasswordTest() {
         extentLogger = report.createTest("Wrong password test");
         extentLogger.info("Entering login information");
