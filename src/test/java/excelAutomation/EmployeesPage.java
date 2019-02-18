@@ -73,8 +73,7 @@ public class EmployeesPage {
     @FindBy(tagName = "button")
     public WebElement submit;
 
-    @FindBy(linkText = "Your application has been submitted.")
-    public WebElement applicationSubmitted;
+
 
     public void chooseGender(Gender gender) {
         if (gender == Gender.MALE && !male.isSelected()) {

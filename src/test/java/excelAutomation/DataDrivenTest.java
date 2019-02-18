@@ -3,15 +3,16 @@ package excelAutomation;
 import com.weborders.utilities.BrowserUtils;
 import com.weborders.utilities.ConfigurationReader;
 import com.weborders.utilities.Driver;
+import com.weborders.utilities.TestBase;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class DataDrivenTest {
+public class DataDrivenTest extends TestBase {
 
     @Test
-    public void employeeFormTest(){
+    public void employeeFormTest() throws InterruptedException {
         Driver.getDriver().get(ConfigurationReader.getProperty("urlxl"));
         EmployeesPage  ep = new EmployeesPage();
 
@@ -30,9 +31,9 @@ public class DataDrivenTest {
 
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(),5);
         wait.until(ExpectedConditions.urlContains("thankyou"));
-        wait.until(ExpectedConditions.visibilityOf())
-
-        Assert.assertTrue(ep.applicationSubmitted.isDisplayed());
+        BrowserUtils.waitForPageToLoad(5);
+        ConfimationPage cp = new ConfimationPage();
+        Assert.assertEquals(cp.getFullName(), "Mark Smith");
 
 
 
