@@ -20,18 +20,18 @@ public class DataDrivenTest extends TestBase {
         ep.firstName.sendKeys("Mark");
         ep.lastName.sendKeys("Smith");
         ep.role.sendKeys("Student");
-        ep.chooseGender(EmployeesPage.Gender.MALE);
+        ep.chooseGender("Male");
         ep.email.sendKeys("markSmith@hotmail.com");
         ep.annaulSalary.sendKeys("125000");
-        ep.selectEducation(EmployeesPage.Education.HIGH_SCHOOL);
-        ep.chooseCertification(EmployeesPage.Certification.AWS,EmployeesPage.Certification.Java_OCA, EmployeesPage.Certification.Scrum_Master);
+        ep.selectEducation("High School");
+        ep.chooseCertification("AWS");
         ep.additionalSkillsTxt.sendKeys("SQL, BDD, Cucumber, Selenium");
         ep.submit.click();
 
 
-        WebDriverWait wait = new WebDriverWait(Driver.getDriver(),5);
-        wait.until(ExpectedConditions.urlContains("thankyou"));
-        BrowserUtils.waitForPageToLoad(5);
+//        WebDriverWait wait = new WebDriverWait(Driver.getDriver(),5);
+//        wait.until(ExpectedConditions.urlContains("thankyou"));
+//        BrowserUtils.waitForPageToLoad(5);
         ConfimationPage cp = new ConfimationPage();
         Assert.assertEquals(cp.getFullName(), "Mark Smith");
 

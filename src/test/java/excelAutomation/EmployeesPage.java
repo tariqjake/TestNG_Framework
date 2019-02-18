@@ -75,46 +75,46 @@ public class EmployeesPage {
 
 
 
-    public void chooseGender(Gender gender) {
-        if (gender == Gender.MALE && !male.isSelected()) {
+    public void chooseGender(String gender) {
+        if (gender.equalsIgnoreCase("male") && !male.isSelected()) {
             male.click();
-        } else if (gender == Gender.FEMALE && !female.isSelected()) {
+        } else if (gender.equalsIgnoreCase("female") && !female.isSelected()) {
             female.click();
         }
     }
 
-    public void selectEducation(Education education){
+    public void selectEducation(String education){
         Select select = new Select(educationDropDown);
         switch (education){
-            case HIGH_SCHOOL:
+            case "High School":
                 select.selectByVisibleText("High School");
                 break;
-            case UNDER_GRADUATE:
+            case "Under Graduate":
                 select.selectByVisibleText("Under Graduate");
                 break;
-            case POST_GRADUATE:
+            case "Post Graduate":
                 select.selectByVisibleText("Post Graduate");
                 break;
-            case BOOT_CAMP:
+            case "Boot Camp":
                 select.selectByVisibleText("Boot Camp");
                 break;
         }
     }
 
-    public void chooseCertification(Certification ... certification){
-        for (Certification certificate: certification) {
-            switch (certificate){
-                case AWS:
+    public void chooseCertification(String certification){
+
+            switch (certification){
+                case "AWS":
                     AWS.click();
                     break;
-                case Java_OCA:
+                case "Java OCA":
                     javaOCA.click();
                     break;
-                case Scrum_Master:
+                case "Scrum Master":
                     scrumMaster.click();
                     break;
 
-            }
+
         }
     }
 
