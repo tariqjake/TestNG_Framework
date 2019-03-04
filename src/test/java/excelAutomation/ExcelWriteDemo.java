@@ -25,8 +25,6 @@ public class ExcelWriteDemo {
                 workSheet.getRow(i).getCell(2).setCellValue("Lucky Numbers");
             else
                 workSheet.getRow(i).getCell(2).setCellValue((int) (Math.random() * 10));
-            else
-                workSheet.getRow(i).getCell(2).setCellValue("Lucky Numbers");
         }
 
         FileOutputStream outputStream = new FileOutputStream(path);
