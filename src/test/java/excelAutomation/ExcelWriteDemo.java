@@ -12,7 +12,6 @@ import java.io.IOException;
 
 public class ExcelWriteDemo {
 
-
     @Test
     public void writeDemo() throws IOException {
         String path = "src/test/resources/Countries.xls";
@@ -22,7 +21,9 @@ public class ExcelWriteDemo {
         for (int i = 0; i <= workSheet.getLastRowNum(); i++) {
             if (workSheet.getRow(i).getCell(2) == null)
                 workSheet.getRow(i).createCell(2);
-            if (i != 0)
+            if (i == 0)
+                workSheet.getRow(i).getCell(2).setCellValue("Lucky Numbers");
+            else
                 workSheet.getRow(i).getCell(2).setCellValue((int) (Math.random() * 10));
             else
                 workSheet.getRow(i).getCell(2).setCellValue("Lucky Numbers");
@@ -34,7 +35,6 @@ public class ExcelWriteDemo {
         inputStream.close();
         outputStream.close();
         workbook.close();
-
 
     }
 }
